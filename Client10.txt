@@ -1,9 +1,0 @@
-[Interface]
-PrivateKey = ODrQyzqmAeJdwfejiU24xK4J/M/3gRRMazh6j6elq2o=
-Address = 172.27.1.10/24
-DNS = 1.1.1.1
-
-[Peer]
-Endpoint = 52.149.167.234:2345
-PublicKey = flsLXREZZnG3bxL+HMRT74ABP7X1dcH6H4HHpOvCUFY=
-AllowedIPs = 0.0.0.0/0
