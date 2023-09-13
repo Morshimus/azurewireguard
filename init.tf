@@ -15,6 +15,10 @@ terraform {
   }
 }
 
+locals {
+  azure_auth = jsondecode(file("${path.module}/azure_key.json"))
+}
+
 provider "azurerm" {
   features {
     virtual_machine {
@@ -23,8 +27,8 @@ provider "azurerm" {
       skip_shutdown_and_force_delete = true
     }
   }
-  tenant_id       = var.azure.tenant_id
-  subscription_id = var.azure.subscription_id
-  client_id       = var.azure.client_id
-  client_secret   = var.azure.client_secret
+  client_id       = local.azure_auth.appId
+  client_secret   = local.azure_auth.password
+  tenant_id       = local.azure_auth.tenantId
+  subscription_id = local.azure_auth.subscriptionId
 }

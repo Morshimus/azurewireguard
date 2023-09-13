@@ -9,3 +9,5 @@
 # sensitive
 *.tfvars
 .sshkey
+*.infracost*
+*azure_key.json*

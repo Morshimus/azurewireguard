@@ -49,7 +49,7 @@ variable "wg" {
     vmsize     = "Standard_B1s",
     dbpath     = "/srv/wg",
     scriptpath = "/usr/local/scripts",
-    port       = 12345,
+    port       = 2345,
     tags = {
       service = "VPN"
       type    = "Wireguard"

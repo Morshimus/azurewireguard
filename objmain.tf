@@ -26,7 +26,7 @@ resource "azurerm_network_security_group" "main" {
   dynamic "security_rule" {
     for_each = [22, 80]
     content {
-      name                       = "Allow port ${security_rule.value} in"
+      name                       = "Allow_port_${security_rule.value}_in"
       priority                   = 1000 + security_rule.value
       direction                  = "Inbound"
       access                     = "Allow"
